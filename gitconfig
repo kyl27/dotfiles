@@ -21,6 +21,3 @@
 	name = Kevin Li
 	email = kyl27@cornell.edu
 
-[http "https://bbgithub.dev.bloomberg.com"]
-    proxy = https://bproxy.tdmz1.bloomberg.com:80
-    sslVerify = false
