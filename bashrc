@@ -48,17 +48,17 @@ cat <<EOF
 #						 #
 # Layout of this file:				 #
 # MY BASHRC FILE				 #
-# ├── <This Intro/About Section>		 #
-# ├── ORIGINAL CONTENT				 #
-# ├── CUSTOM STARTS HERE			 #
-# │   ├── MISCELLANEOUS				 #
-# │   ├── COMMAND PROMPT & CLI			 #
-# │   ├── BASH SETTINGS				 #
-# │   ├── COMPLETIONS				 #
-# │   ├── FUNCTIONS				 #
-# │   ├── ALIASES				 #
-# │   └── MY CUSTOM STARTS HERE (put own here)	 #
-# └── BASHRC ENDS HERE				 #
+# â”œâ”€â”€ <This Intro/About Section>		 #
+# â”œâ”€â”€ ORIGINAL CONTENT				 #
+# â”œâ”€â”€ CUSTOM STARTS HERE			 #
+# â”‚   â”œâ”€â”€ MISCELLANEOUS				 #
+# â”‚   â”œâ”€â”€ COMMAND PROMPT & CLI			 #
+# â”‚   â”œâ”€â”€ BASH SETTINGS				 #
+# â”‚   â”œâ”€â”€ COMPLETIONS				 #
+# â”‚   â”œâ”€â”€ FUNCTIONS				 #
+# â”‚   â”œâ”€â”€ ALIASES				 #
+# â”‚   â””â”€â”€ MY CUSTOM STARTS HERE (put own here)	 #
+# â””â”€â”€ BASHRC ENDS HERE				 #
 #						 #
 # Latest Changes:				 #
 # 4.0 - 15/12/11 - Updated for Oneiric, but	 #
@@ -840,7 +840,7 @@ export EDITOR='vi'				# use default text editor
 export HISTCONTROL=ignoreboth:erasedups		# for 'ignoreboth': ignore duplicates and /^\s/
 # export HISTCONTROL=ignoreboth			# ignore spaced commands and prevents storing of duplicate commands (ie, ignoredups & ignorespace)
 # export HISTCONTROL=ignoredups			# don't put duplicate lines in the history. See bash(1) for more options
-# export HISTCONTROL=ignorespace		# will make sure that bash don’t store any command beginning with the space character
+# export HISTCONTROL=ignorespace		# will make sure that bash donâ€™t store any command beginning with the space character
 # export HISTFILE=/dev/null			# disable history for current shell session
 # export HISTFILE='$HOME/.history'		# set history file location
 # export HISTFILESIZE=10000			# increase or decrease the size of the history to '10,000'
@@ -863,7 +863,7 @@ export HOSTFILE=$HOME/.hosts    		# put list of remote hosts in ~/.hosts ...
 # export https_proxy=${MY_PROXY}		# proxy setting
 # export IGNOREEOF=1				# prevent CTRL-D from immediately logging out
 # export INPUTRC=/etc/inputrc			# it's possible that this will make bash find my delete key (and everything else)((but i don't think it did))
-# export INPUTRC=$HOME/.inputrc			# type in ‘whatever’ and press ‘Page Up’ key and bash automatically fetches last command that starts with whatever and completes the command for you (requires '$HOME/.inputrc' with these lines: #Page up/page down && "\e[5~": history-search-backward && "\e[6~": history-search-forward)
+# export INPUTRC=$HOME/.inputrc			# type in â€˜whateverâ€™ and press â€˜Page Upâ€™ key and bash automatically fetches last command that starts with whatever and completes the command for you (requires '$HOME/.inputrc' with these lines: #Page up/page down && "\e[5~": history-search-backward && "\e[6~": history-search-forward)
 # export LC_COLLATE="en_CA.utf8"		# change sorting methods [a-Z] instead of [A-Z]
 export LESSCHARSET='latin1'
 export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \'
@@ -5214,8 +5214,8 @@ echo -n "Select an audio track language:
 (2)  Dansk (Danish) - da
 (3)  Deutsch - de
 (4)  English - en
-(5)  Español - es
-(6)  Français - fr
+(5)  EspaÃ±ol - es
+(6)  FranÃ§ais - fr
 (7)  Greek - el
 (8)  Italiano (Italian) - it
 (9)  Japanese - ja
@@ -5474,8 +5474,8 @@ echo -n "Select a subtitles track language:
 (2)  Dansk (Danish) - da
 (3)  Deutsch - de
 (4)  English - en
-(5)  Español - es
-(6)  Français - fr
+(5)  EspaÃ±ol - es
+(6)  FranÃ§ais - fr
 (7)  Greek - el
 (8)  Italiano (Italian) - it
 (9)  Japanese - ja
@@ -6038,48 +6038,48 @@ function bashtips() {
 cat <<EOF
 DIRECTORIES
 -----------
-~- �  �  �     Previous working directory
-pushd tmp �  Push tmp && cd tmp
-popd �  �  �  � Pop && cd
+~- Â  Â  Â     Previous working directory
+pushd tmp Â  Push tmp && cd tmp
+popd Â  Â  Â  Â Pop && cd
 GLOBBING AND OUTPUT SUBSTITUTION
 --------------------------------
 ls a[b-dx]e Globs abe, ace, ade, axe
 ls a{c,bl}e Globs ace, able
-\$(ls) �  �  � \`ls\` (but nestable!)
+\$(ls) Â  Â  Â \`ls\` (but nestable!)
 HISTORY MANIPULATION
 --------------------
-!! �  �  �   Last command
-!?foo �    Last command containing \`foo'
+!! Â  Â  Â   Last command
+!?foo Â    Last command containing \`foo'
 ^foo^bar^ Last command containing \`foo', but substitute \`bar'
-!!:0 �  �   Last command word
-!!:^ �  �   Last command's first argument
-!\$ �  �    Last command's last argument
-!!:* �  �   Last command's arguments
-!!:x-y �   Arguments x to y of last command
-C-s �  �    search forwards in history
-C-r �  �    search backwards in history
+!!:0 Â  Â   Last command word
+!!:^ Â  Â   Last command's first argument
+!\$ Â  Â    Last command's last argument
+!!:* Â  Â   Last command's arguments
+!!:x-y Â   Arguments x to y of last command
+C-s Â  Â    search forwards in history
+C-r Â  Â    search backwards in history
 LINE EDITING
 ------------
-M-d �  �  kill to end of word
-C-w �  �  kill to beginning of word
-C-k �  �  kill to end of line
-C-u �  �  kill to beginning of line
-M-r �  �  revert all modifications to current line
-C-] �  �  search forwards in line
-M-C-] �  search backwards in line
-C-t �  �  transpose characters
-M-t �  �  transpose words
-M-u �  �  uppercase word
-M-l �  �  lowercase word
-M-c �  �  capitalize word
+M-d Â  Â  kill to end of word
+C-w Â  Â  kill to beginning of word
+C-k Â  Â  kill to end of line
+C-u Â  Â  kill to beginning of line
+M-r Â  Â  revert all modifications to current line
+C-] Â  Â  search forwards in line
+M-C-] Â  search backwards in line
+C-t Â  Â  transpose characters
+M-t Â  Â  transpose words
+M-u Â  Â  uppercase word
+M-l Â  Â  lowercase word
+M-c Â  Â  capitalize word
 COMPLETION
 ----------
-M-/ �  �  complete filename
-M-~ �  �  complete user name
-M-@ �  �  complete host name
-M-\$ �  � complete variable name
-M-! �  �  complete command name
-M-^ �  �  complete history
+M-/ Â  Â  complete filename
+M-~ Â  Â  complete user name
+M-@ Â  Â  complete host name
+M-\$ Â  Â complete variable name
+M-! Â  Â  complete command name
+M-^ Â  Â  complete history
 EOF
 }
 
@@ -7887,11 +7887,11 @@ function encrypt()
 case $LANG in
   cs* )
     err_title="Chyba"
-    err_files="Neoznačen soubor"
-    encrypt="� ifrovat"
-    decrypt="Dešifrovat"
+    err_files="NeoznaÄen soubor"
+    encrypt="Å ifrovat"
+    decrypt="DeÅ¡ifrovat"
     file_msg="soubor:"
-    pass_msg="Vložte heslo";;
+    pass_msg="VloÅ¾te heslo";;
   * )
     err_title="Error"
     err_files="No file selected"
@@ -9883,7 +9883,7 @@ sed "s/$1/${SMSO}\0${RMSO}/gI" | more
 # http://seanp2k.com/?p=13
 # Good for debugging a PHP script you didn't write and can't trackdown where MySQL connect string actually is
 # function grip() {
-# grep -ir "$1″ "$PWD"
+# grep -ir "$1â€³ "$PWD"
 # }
 
 
@@ -10891,7 +10891,7 @@ function show_battery_load()
 						statesign="v"
 					;;
 					charged,)
-						statesign="°"
+						statesign="Â°"
 					;;
 				esac
 				battery="${statesign}${load}"
@@ -12584,13 +12584,13 @@ function newbies()
 read -sn 1 -p "1/10. Welcome to Ubuntu. Relax. Take a breath. Just because it's not Windows doesn't mean it will be difficult to figure out. Especially with me at the wheel. ;)
 
 "
-read -sn 1 -p "﻿2/10. Ubuntu is an operating system, just like Windows (ie. XP, Vista, 7). It is a Linux distro, meaning it uses the Linux kernel, which is essentially the brains of the operating system. Ubuntu is highly customizable, and I have tweaked it to look similar to Windows, but it can look, feel, and run any way you'd like. Unlike Windows, Ubuntu is free, as well as nearly all of it's applications. Less than 1% of the world uses Linux; about half of that use Ubuntu (#1 ranked Linux distro)). And due to this, and the fact that it's structure is different than Windows, it is pretty much virus-free. Also, no Windows viruses can ever harm a Linux/Ubuntu computer. So download away.
+read -sn 1 -p "ï»¿2/10. Ubuntu is an operating system, just like Windows (ie. XP, Vista, 7). It is a Linux distro, meaning it uses the Linux kernel, which is essentially the brains of the operating system. Ubuntu is highly customizable, and I have tweaked it to look similar to Windows, but it can look, feel, and run any way you'd like. Unlike Windows, Ubuntu is free, as well as nearly all of it's applications. Less than 1% of the world uses Linux; about half of that use Ubuntu (#1 ranked Linux distro)). And due to this, and the fact that it's structure is different than Windows, it is pretty much virus-free. Also, no Windows viruses can ever harm a Linux/Ubuntu computer. So download away.
 
 "
 read -sn 1 -p "3/10. Your computer's username is 'Me'. Your computer's password is 'password'. The password can easily be changed.
 
 "
-read -sn 1 -p "﻿4/10. To change the password, you must change both the User and the Default Keyring passwords. First, change the user password, by going to Menu (bottom left button) -> System -> Preferences -> About Me and click 'Change Password...'. Second, change the Default Keyring password by going to Menu (bottom left button) -> Accessories -> Passwords and Encryption Keys and find 'Passwords: default', click it with the right mouse button, and select 'Change Password'.
+read -sn 1 -p "ï»¿4/10. To change the password, you must change both the User and the Default Keyring passwords. First, change the user password, by going to Menu (bottom left button) -> System -> Preferences -> About Me and click 'Change Password...'. Second, change the Default Keyring password by going to Menu (bottom left button) -> Accessories -> Passwords and Encryption Keys and find 'Passwords: default', click it with the right mouse button, and select 'Change Password'.
 
 "
 read -sn 1 -p "5/10. Ubuntu updates and upgrades are currently set up to install important security updates as well as to pop up a box prompting you to click install when anything else requires an upgrade. Very easy. Just need password. One thing about updates on Ubuntu is it updates everything, both the operating system and the installed applications through the repositories (official and unofficial servers that house a large number of various applications and games).
@@ -13629,16 +13629,6 @@ function right() { bc <<< "obase=8;ibase=2;$1"; }; # touch foo; chmod $(right 11
 # function rip() {
 # handbrake -i /dev/dvd -o ${HOME}/${1}.mp4 -L -U -F -f mp4 -e x264 -b 4000 -B 192
 # }
-
-
-
-##################################################
-# Log rm commands				 #
-##################################################
-
-function rm() {         workingdir=$( pwdx $$ | awk '{print $2}' )         /bin/rm $*         echo "rm $* issued at $(date) by the user $(who am i| awk '{print $1} ') in the directory ${workingdir}"  >> /tmp/rm.out ; }
-
-
 
 ##################################################
 # Using associative array to remove all files and#
@@ -15632,9 +15622,9 @@ alias d_='ssh 192.168.1.4'
 alias dr='dirs -v'
 alias ds_='dig +noauthority +noadditional +noqr +nostats +noidentify +nocmd +noquestion +nocomments'		# short and sweet output from dig(1)
 alias e='espeak'
-alias egrep='egrep –color=auto'
+alias egrep='egrep â€“color=auto'
 alias enote='vi ~/todo;~/motd.pl'
-alias fgrep='fgrep –color=auto'
+alias fgrep='fgrep â€“color=auto'
 alias ge='geany'
 alias go='startx'
 alias grep='grep --color=auto'								# highlight matched pattern
@@ -16330,7 +16320,7 @@ alias restoremod='chgrp users -R .;chmod u=rwX,g=rX,o=rX -R .;chown $(pwd |cut -
 
 alias a?='cat ~/.alias.help'
 alias dn='OPTIONS=$(\ls -F | grep /$); select s in $OPTIONS; do cd $PWD/$s; break;done'
-alias espanol='echo -e \"á Á é É í Í ó Ó ú Ú ñ Ñ ü Ü ¿ ¡ ¢ ‘ ’ “ ” „ ‚ …\"'
+alias espanol='echo -e \"Ã¡ Ã Ã© Ã‰ Ã­ Ã Ã³ Ã“ Ãº Ãš Ã± Ã‘ Ã¼ Ãœ Â¿ Â¡ Â¢ â€˜ â€™ â€œ â€ â€ž â€š â€¦\"'
 alias f?='cat ~/.function.help'
 alias help='OPTIONS=$(\ls ~/.tips -F);select s in $OPTIONS; do less ~/.tips/$s; break;done'
 alias testh='help test|sed -e :a -e "$!N;s/\(-n STRING\)\n/\1, /;s/\n\( \{23\}\| \{4\}\([a-z]\)\)/ \2/;ta;P;D"|sed "s/ \{1,\}/ /g;/^ $/d;/:$/s/^/\n/"|sed -n "/File operators:/,\$p"'						# test quick help alias
@@ -16492,7 +16482,7 @@ alias xtop='xterm -fn 6x13 -bg LightSlateGray -fg black -e top &'
 
 
 
-fi	# end interactive check﻿
+fi	# end interactive checkï»¿
 
 
 
