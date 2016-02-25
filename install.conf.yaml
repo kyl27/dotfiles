@@ -4,8 +4,9 @@
     ~/.bashrc: bashrc
     ~/.vimrc: vimrc
     ~/.profile: profile
-    ~/.gitconfig: gitconfig
-
+    ~/.gitconfig:
+        path: gitconfig
+        force: true
 - shell: 
   - [git submodule update --init --recursive, Installing submodule]
 
