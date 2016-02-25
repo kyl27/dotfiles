@@ -13,11 +13,13 @@
     new = green bold
 		
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+    added = green
+    changed = yellow
+    untracked = red
 
 [user]
 	name = Kevin Li
 	email = kyl27@cornell.edu
 
+[push]
+	default = simple
