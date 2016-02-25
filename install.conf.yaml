@@ -1,7 +1,6 @@
 - clean: ['~']
 
 - link: 
-    ~/.dotfiles: ''
     ~/.bashrc: bashrc
     ~/.vimrc: vimrc
     ~/.profile: profile

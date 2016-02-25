@@ -243,6 +243,7 @@ export LS_COLORS
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias g='git'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -13630,6 +13631,7 @@ function right() { bc <<< "obase=8;ibase=2;$1"; }; # touch foo; chmod $(right 11
 # handbrake -i /dev/dvd -o ${HOME}/${1}.mp4 -L -U -F -f mp4 -e x264 -b 4000 -B 192
 # }
 
+
 ##################################################
 # Using associative array to remove all files and#
 # directories under PWD except			 #
@@ -15681,6 +15683,7 @@ alias rd='cd "`pwd -P`"' 								# if in directory containing symlink in path, c
 alias real_location='readlink -f' 							# get real location of file
 alias reboot='sudo /sbin/reboot'
 # alias reboot='sudo shutdown -r now'   						# easy shutdown management
+# alias rename='rename -iv'
 alias rgrep='find . \( ! -name .svn -o -prune \) -type f -print0 | xargs -0 grep'	# rgrep: recursive grep without .svn
 alias rh='rehash'
 alias rmdir='rmdir -v'
@@ -16494,3 +16497,5 @@ fi	# end interactive checkï»¿
 ######################################################################################################################################################
 ################################### MY BASHRC FILE ################################### MY BASHRC FILE ################################### MY BASHRC FILE
 ######################################################################################################################################################
+export PATH="$PATH:~/.bin"
+export PATH="$PATH:~/.bin_local"
