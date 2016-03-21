@@ -16,8 +16,6 @@
 ######################################################################################################################################################
 
 
-. /bb/unsupported/scrputil/team_profile/scrp.env
-. /bb/bigstorq4/scrpbuild/devtools/bin/verbose_history.bash
 ## restore last working directory
 [ -e ~/.lastcd ] && cd $(cat ~/.lastcd)
 xcd () {
