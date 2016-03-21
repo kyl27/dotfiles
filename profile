@@ -11,7 +11,7 @@ set -o vi      # vi style command line mode
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # this variable needs to be set for pnewtask/pnewscript to function
 # if you don't know what to put here leave it alone or ask your team.
-#GROUP=put_your_group_here
+# GROUP=put_your_group_here
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # below block is executed if:

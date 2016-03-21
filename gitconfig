@@ -1,5 +1,8 @@
 [color]
     ui = auto
+
+[alias]
+    logdog = log --decorate --oneline --graph --all
 		
 [color "branch"]
     current = yellow reverse
@@ -19,10 +22,13 @@
 
 [user]
 	name = Kevin Li
-	email = kyl27@cornell.edu
+	email = kli242@bloomberg.net
 
 [push]
 	default = simple
+
+[pull]
+    rebase = true
 
 [include]
     path = ~/.gitconfig_local

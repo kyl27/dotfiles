@@ -14158,16 +14158,6 @@ function sshpg2()
 }
 
 
-
-##################################################
-# Function that outputs dots every second until  #
-# command completes				 #
-##################################################
-
-function sleeper() { while `ps -p $1 &>/dev/null`; do echo -n "${2:-.}"; sleep ${3:-1}; done; }; export -f sleeper
-
-
-
 ##################################################
 # Slow down CPU and IO for process and its 	 #
 # offsprings					 #
@@ -15532,8 +15522,6 @@ alias autoremove='sudo apt-get autoremove'
 alias check='sudo apt-get check'
 alias dist-upgrade='sudo apt-get dist-upgrade'
 alias dselect-upgrade='sudo apt-get dselect-upgrade'
-alias source='sudo apt-get source'
-
 
 
 ##################################################
