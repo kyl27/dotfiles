@@ -3,7 +3,6 @@
 - link: 
     ~/.bashrc: bashrc
     ~/.vimrc: vimrc
-    ~/.profile: profile
     ~/.gitconfig:
         path: gitconfig
         force: true
