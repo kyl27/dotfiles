@@ -21,6 +21,7 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 export LSCOLORS=ExBxCxDxDxegedabagacad
+export LS_COLORS=$LS_COLORS:'di=01;34:fi=01;37:ln=01;31:pi=01;33:so=01;32:bd=01;34;46:cd=01;34;43:or=30;41:mi=30;41:ex=01;33'
 
 alias ls='ls --color -GFh'
 
