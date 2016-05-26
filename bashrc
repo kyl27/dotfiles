@@ -22,7 +22,7 @@ shopt -s checkwinsize
 
 export LSCOLORS=ExBxCxDxDxegedabagacad
 
-alias ls='ls -GFh'
+alias ls='ls --color -GFh'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
