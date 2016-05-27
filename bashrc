@@ -20,10 +20,14 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+if [ "$OS" = "Darwin" ]; then
+    alias ls='ls -GFh'
+else
+    alias ls='ls --color -GFh'
+fi
+
 export LSCOLORS=ExBxCxDxDxegedabagacad
 export LS_COLORS=$LS_COLORS:'di=01;34:fi=01;37:ln=01;31:pi=01;33:so=01;32:bd=01;34;46:cd=01;34;43:or=30;41:mi=30;41:ex=01;33'
-
-alias ls='ls --color -GFh'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -84,7 +88,7 @@ export HISTSIZE=10000				# increase or decrease the size of the history to '10,0
 export HISTTIMEFORMAT='%Y-%m-%d_%H:%M:%S_%a  '	# makes history display in YYYY-MM-DD_HH:MM:SS_3CharWeekdaySpaceSpace format
 export HOSTFILE=$HOME/.hosts    		# put list of remote hosts in ~/.hosts ...
 export LESSCHARSET='latin1'
-export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \'
+export LESS='-i -N -w -z-4 -M -X -F -R -P%t?f%f \'
 # export LESSOPEN="|lesspipe.sh %s"; export LESSOPEN
 export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'	# use this if lesspipe.sh exists
 export TERM='xterm'
