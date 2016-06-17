@@ -141,13 +141,13 @@ hour=$(date +"%H")
 # if it is midnight to midafternoon will say G'morning
 if [ $hour -ge 0 -a $hour -lt 12 ]
 then
-  greet="Good Morning, $USER. Welcome back."
+  greet="Good Morning, Kevin. Welcome back."
 # if it is midafternoon to evening ( before 6 pm) will say G'noon
 elif [ $hour -ge 12 -a $hour -lt 18 ]
 then
-  greet="Good Afternoon, $USER. Welcome back."
+  greet="Good Afternoon, Kevin. Welcome back."
 else # it is good evening till midnight
-  greet="Good Evening, $USER. Welcome back."
+  greet="Good Evening, Kevin. Welcome back."
 fi
 # display greeting
 echo $greet
@@ -165,7 +165,7 @@ hol=1
 # if it is New Year's Day
 if [ "$day" = "January1" ]
 then
-  holgreet="Happy New Years. Have a Happy $year."
+  holgreet="Happy New Year. Have a Happy $year."
 # if it is Groundhog Day
 elif [ "$day" = "February2" ]
 then
@@ -173,19 +173,19 @@ then
 # if it is Valentine's Day
 elif [ "$day" = "February14" ]
 then
-  holgreet="Have a Happy Valentine's Day."
+  holgreet="Happy Valentine's Day <3."
 # if it is Independance Day
 elif [ "$day" = "July4" ]
 then
-  holgreet="Have a Happy Forth of July."
+  holgreet="Have a Happy Forth of July! Land of the free and home of the brave."
 # if it is my birthday
-elif [ "$day" = "July19" ]
-then
-  holgreet="Have a Happy Birthday."
-# if it is Halloween
 elif [ "$day" = "April13" ]
 then
-  holgreet="Happy Halloween."
+  holgreet="Happy Birthday, Kevin!"
+# if it is Halloween
+elif [ "$day" = "October31" ]
+then
+  holgreet="Happy Halloween. Boo!"
 # if it is Christmas Eve
 elif [ "$day" = "December24" ]
 then
