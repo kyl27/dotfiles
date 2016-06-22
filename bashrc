@@ -117,9 +117,7 @@ unset MAILCHECK        				# don't want my shell to warn me of incoming mail
 # PATH                                           #
 ##################################################
 
-if [ "$UID" -eq 0 ]; then
-    PATH=$PATH:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-fi
+PATH=$PATH:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 # remove duplicate path entries
 export PATH=$(echo $PATH | awk -F: '
