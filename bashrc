@@ -33,6 +33,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias ag='ag -s --color-match "1;31" --pager "less -n"'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -88,7 +90,7 @@ export HISTSIZE=10000				# increase or decrease the size of the history to '10,0
 export HISTTIMEFORMAT='%Y-%m-%d_%H:%M:%S_%a  '	# makes history display in YYYY-MM-DD_HH:MM:SS_3CharWeekdaySpaceSpace format
 export HOSTFILE=$HOME/.hosts    		# put list of remote hosts in ~/.hosts ...
 export LESSCHARSET='latin1'
-export LESS='-i -N -w -z-4 -M -X -F -R -P%t?f%f \'
+export LESS='-i -w -z-4 -M -X -F -R -P%t?f%f \'
 # export LESSOPEN="|lesspipe.sh %s"; export LESSOPEN
 export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'	# use this if lesspipe.sh exists
 export TERM='xterm'
@@ -117,12 +119,16 @@ unset MAILCHECK        				# don't want my shell to warn me of incoming mail
 # PATH                                           #
 ##################################################
 
-PATH=$PATH:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-
-# remove duplicate path entries
-export PATH=$(echo $PATH | awk -F: '
-{ for (i = 1; i <= NF; i++) arr[$i]; }
-END { for (i in arr) printf "%s:" , i; printf "\n"; } ')
+if [[ -z $TMUX ]]; then
+    PATH=$PATH:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+    
+    # remove duplicate path entries
+    export PATH=$(echo $PATH | awk -F: '
+    { for (i = 1; i <= NF; i++) arr[$i]; }
+    END { for (i in arr) printf "%s:" , i; printf "\n"; } ')
+else
+    cd ~
+fi
 
 # autocomplete ssh commands
 complete -W "$(echo `cat ~/.bash_history | egrep '^ssh ' | sort | uniq | sed 's/^ssh //'`;)" ssh
@@ -148,7 +154,7 @@ else # it is good evening till midnight
   greet="Good Evening, Kevin. Welcome back."
 fi
 # display greeting
-echo $greet
+# echo $greet
 
 
 
