@@ -3,6 +3,7 @@
 - link: 
     ~/.bashrc: bashrc
     ~/.vimrc: vimrc
+    ~/.tmux.conf: tmux.conf
     ~/.gitconfig:
         path: gitconfig
         force: true
