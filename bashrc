@@ -20,6 +20,9 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+# for resolving pesky os differing switches
+OS=$(uname)
+
 if [ "$OS" = "Darwin" ]; then
     alias ls='ls -GFh'
 else
@@ -60,7 +63,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-OS=$(uname)		# for resolving pesky os differing switches
 
 
 
