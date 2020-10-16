@@ -4,6 +4,7 @@
     ~/.bashrc: bashrc
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
+    ~/.colordiffrc: colordiffrc
     ~/.gitconfig:
         path: gitconfig
         force: true
