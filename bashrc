@@ -29,7 +29,7 @@ else
     alias ls='ls --color -GFh'
 fi
 
-export LSCOLORS=ExBxCxDxDxegedabagacad
+export LSCOLORS=gxbxcxfxdxegedabagacad
 export LS_COLORS=$LS_COLORS:'di=01;34:fi=01;37:ln=01;31:pi=01;33:so=01;32:bd=01;34;46:cd=01;34;43:or=30;41:mi=30;41:ex=01;33'
 
 alias grep='grep --color=auto'
